@@ -1,0 +1,20 @@
+import java.util.*;
+class MatrixDiagonalSum{
+    public int sum(int[][] a){
+        int R=4,C=4;
+        int sum=0;
+        for(int i=0;i<R;i++){
+            for(int j=0;j<C;j++){
+                if(i==j){
+                    sum+=a[i][j];
+                }
+            }
+        }
+        return sum;
+        }
+    public static void main(String[] args){
+        int[][] a={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+        MatrixDiagonalSum ma=new MatrixDiagonalSum();
+        System.out.println("Diagonal Sum:"+ma.sum(a));
+    }
+}
